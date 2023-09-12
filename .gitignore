@@ -1,11 +1,9 @@
 # Ignore build artifacts
 data/CHASEDB1/
-./.ipynb_checkpoints
+.ipynb_checkpoints
 __pycache__
+notebook/.ipynb_checkpoints
 
-# Ignore log files
-*.log
-
-# Ignore user-specific settings
+# Ignore user-specific files
 .vscode/
-.ipynb/
+#.ipynb/

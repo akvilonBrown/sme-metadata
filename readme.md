@@ -24,11 +24,12 @@ Train/validation/test split is 18/4/6. In train split 6 samples have fine masks 
 
 ## Experiments
 The experiments reproduce the simplified case from the paper [Metadata Improves Segmentation Through Multitasking Elicitation](https://arxiv.org/abs/2308.09411) with segmentation of data having different annotation styles, where metadata helps the model to adopt certain target mask specifics and then to express the desired style during inference. Hence, with the lack of desired annotation style the model still can benefit from the availability of data with other, subjectively less accurate annotation style, and avoid "averaging" of styles. 
+
 Each experiment runs in the dedicated folder that must have **saved_models** subfolder for checkpoints. For this the script **train_XX.py** should be launched with respective arguments or with default ones(the description of arguments is in **utils/cli.py** file). The training saves checkpoint model **best_model.pt** and a series of empty files **best_model_00##.pt** with epoch number where checkpoints were saved - this is a sort of logging, since training is relatively fast and progress bar is used that doesn't stand interrupting with log messages. Upon training (100 epochs by default) the lossess and learning rates are saved and plotted. The evaluation with the metrics saved is performed with the script **evaluate_XX.py**.
 
 ## Results
 
-Metrics on the test data:
+Metrics on the test data. The description of models are in the paper. SME 'coarse' means prediction of SME model with 'incorrect' annotation style:
 
 | Model/Experiment | IoU total| Dice total|
 | ------ | ------ |------ |

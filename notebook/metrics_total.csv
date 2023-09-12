@@ -1,0 +1,11 @@
+,iou_total,dice_total
+"reference
+sub",0.6148,0.7615
+reference,0.6847,0.8128
+"sme
+dummy",0.6945,0.8197
+film,0.6808,0.8101
+me,0.6982,0.8223
+sme,0.7012,0.8243
+"sme
+coarse",0.6803,0.8097
