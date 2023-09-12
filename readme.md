@@ -3,7 +3,7 @@ This repository is an official implementation of the MICCAI DART 2023 paper [Met
 
 ## Installation
 
-The code requires `python>=3.8`, as well as `pytorch>=1.7`.  Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install PyTorch dependencies. The other few libraries are listed in the file `requirements.txt`, so can be installed in bulk by 
+The code requires `python>=3.8`, as well as `pytorch>=1.7`.  Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install PyTorch dependencies. The other few libraries are listed in the file `requirements.txt`, so they can be installed in bulk by 
 ```sh
 git clone https://github.com/akvilonBrown/sme-metadata
 pip install requirements.txt
@@ -13,23 +13,23 @@ The last command is required for local dependencies to work across project folde
 
 ## Data
 The installation doesn't include data. Please download it separately from the [Retinal image database](https://blogs.kingston.ac.uk/retinal/chasedb1/) and unpack in the **data/CHASEDB1/** folder (or somewhere else, but the path should be specified in the configuration then).
-The data contains RGB 28 images of retina and two corresponding sets of binary masks with segmented vessels from two annotators. The few samples of this data are below:
+The data contains RGB 28 images of retina and two corresponding sets of binary masks with segmented vessels from two annotators. A few samples of this data are below:
 
 ![data01L](./images/data01L.png)
 ![data02L](./images/data02L.png)
 ![data08L](./images/data08L.png)
 
 The annotation style of Annotator #1 was selected as ground truth.
-Train/validation/test split is 18/4/6. In train split 6 samples have fine masks from Annotator #1 (33%), the rest 12 have less detailed masks (67%). Validation and test sets have fine masks as a style to be aspired to. The description of the dataset is in the file **data/retina_data.csv** which serves as a instruction for dataloader as well. Annotation styles are denoted with metadata labels 'FINE' and 'COARSE', which transform into hot-encoded labesl [0,1] and [1,0] during training.
+The train/validation/test split is 18/4/6. In the train split six samples have fine masks from Annotator #1 (33%), the rest 12 have less detailed masks (67%). Validation and test sets have fine masks as a style to be aspired to. The description of the dataset is in the file **data/retina_data.csv**, which serves as a instruction for dataloader as well. Annotation styles are denoted with metadata labels 'FINE' and 'COARSE', which transform into hot-encoded labels [0,1] and [1,0] during training.
 
 ## Experiments
-The experiments reproduce the simplified case from the paper [Metadata Improves Segmentation Through Multitasking Elicitation](https://arxiv.org/abs/2308.09411) with segmentation of data having different annotation styles, where metadata helps the model to adopt certain target mask specifics and then to express the desired style during inference. Hence, with the lack of desired annotation style the model still can benefit from the availability of data with other, subjectively less accurate annotation style, and avoid "averaging" of styles. 
+The experiments reproduce the simplified case from the paper [Metadata Improves Segmentation Through Multitasking Elicitation](https://arxiv.org/abs/2308.09411) with the segmentation of data having different annotation styles, where metadata helps the model to adopt certain target mask specifics and then to express the desired style during inference. Hence, with the lack of desired annotation style, the model still can benefit from the availability of data with other, subjectively less accurate annotation style and avoid "averaging" of styles. 
 
-Each experiment runs in the dedicated folder that must have **saved_models** subfolder for checkpoints. For this the script **train_XX.py** should be launched with respective arguments or with default ones(the description of arguments is in **utils/cli.py** file). The training saves checkpoint model **best_model.pt** and a series of empty files **best_model_00##.pt** with epoch number where checkpoints were saved - this is a sort of logging, since training is relatively fast and progress bar is used that doesn't stand interrupting with log messages. Upon training (100 epochs by default) the lossess and learning rates are saved and plotted. The evaluation with the metrics saved is performed with the script **evaluate_XX.py**.
+Each experiment runs in the dedicated folder that must have a **saved_models** subfolder for checkpoints. For this, the script **train_XX.py** should be launched with respective arguments or with default ones(the description of arguments is in the **utils/cli.py** file). The training saves checkpoint model **best_model.pt** and a series of empty files **best_model_00##.pt** with epoch number where checkpoints were saved - this is a sort of logging since training is relatively fast and a progress bar is used that doesn't stand interrupting with log messages. Upon training (100 epochs by default), the losses and learning rates are saved and plotted. The evaluation with the metrics saved is performed with the script **evaluate_XX.py**.
 
 ## Results
 
-Metrics on the test data. The description of models are in the paper. SME 'coarse' means prediction of SME model with 'incorrect' annotation style:
+Metrics on the test data. The description of the models is in the paper. SME 'coarse' means prediction of SME model with 'incorrect' annotation style:
 
 | Model/Experiment | IoU total| Dice total|
 | ------ | ------ |------ |
@@ -48,7 +48,7 @@ Bar plot:
   <img src="./images/performance_iou.png" width="80%" /> 
 </p>
 
-Visual comparison of predictions from various models on the test sample #4 is below:
+The visual comparison of predictions from various models on the test sample #4 is below:
 
 <p float="left">
   <img src="./images/retina2.png" width="100%" /> 
