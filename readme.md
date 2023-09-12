@@ -58,9 +58,9 @@ Visual comparison of predictions from various models on the test sample #4 is be
 If you find the paper useful to your research, please consider citing:
 ```
 @article{plutenko2023_metadata,
-  title={Co-mining: Self-Supervised Learning for Sparsely Annotated Object Detection},
-  author={Wang, Tiancai and Yang, Tong and Cao, Jiale and Zhang, Xiangyu},
-  journal={Proceedings of the AAAI conference on artificial intelligence},
-  year={2021}
+  title={Metadata Improves Segmentation Through Multitasking Elicitation},
+  author={Plutenko, Iaroslav, and Papkov, Mikhail and Palo, Kaupo and Parts, Leopold and Fishman, Dmytro},
+  journal={TBD},
+  year={2023}
 }
 ```
