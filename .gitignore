@@ -2,8 +2,12 @@
 data/CHASEDB1/
 .ipynb_checkpoints/
 __pycache__/
+tcheck/
+eggs/
+.eggs/
+*.egg-info/
 
 
 # Ignore user-specific files
 .vscode/
-.html/
+.html
