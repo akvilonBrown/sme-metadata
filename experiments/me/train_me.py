@@ -12,7 +12,6 @@ from torch.utils.data import DataLoader
 import models
 import torch
 from utils.trainer import Trainer_lr
-#import time
 import random
 from utils.visual import plot_training
 import matplotlib.pyplot as plt
