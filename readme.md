@@ -44,7 +44,7 @@ Metrics on the test data:
 
 Bar plot:
 <p float="left">
-  <img src="./images/performance_iou.png" width="50%" /> 
+  <img src="./images/performance_iou.png" width="80%" /> 
 </p>
 
 Visual comparison of predictions from various models on the test sample #4 is below:
