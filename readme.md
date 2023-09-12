@@ -50,7 +50,7 @@ Bar plot:
 Visual comparison of predictions from various models on the test sample #4 is below:
 
 <p float="left">
-  <img src="./images/retina2.png" width="70%" /> 
+  <img src="./images/retina2.png" width="100%" /> 
 </p>
 
 
