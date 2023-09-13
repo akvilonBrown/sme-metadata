@@ -1,5 +1,4 @@
 # Ignore build artifacts
-data/CHASEDB1/
 .ipynb_checkpoints/
 __pycache__/
 tcheck/
@@ -7,6 +6,11 @@ eggs/
 .eggs/
 *.egg-info/
 
+# Exclude files within data/CHASEDB1/
+data/CHASEDB1/*
+
+# But include the folder data/CHASEDB1/
+!data/CHASEDB1/
 
 # Ignore user-specific files
 .vscode/
