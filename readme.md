@@ -6,7 +6,7 @@ This repository is an official implementation of the MICCAI DART 2023 paper [Met
 The code requires `python>=3.8`, as well as `pytorch>=1.7`.  Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install PyTorch dependencies. The other few libraries are listed in the file `requirements.txt`, so they can be installed in bulk by 
 ```sh
 git clone https://github.com/akvilonBrown/sme-metadata
-pip install requirements.txt
+pip install -r requirements.txt
 pip install -e .
 ```
 The last command is required for local dependencies to work across project folders and subfolders.
