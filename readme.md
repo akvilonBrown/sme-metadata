@@ -58,10 +58,28 @@ The visual comparison of predictions from various models on the test sample #4 i
 ## Citing 
 If you find the paper useful to your research, please consider citing:
 ```
-@article{plutenko2023_metadata,
-  title={Metadata Improves Segmentation Through Multitasking Elicitation},
-  author={Plutenko, Iaroslav, and Papkov, Mikhail and Palo, Kaupo and Parts, Leopold and Fishman, Dmytro},
-  journal={TBD},
-  year={2023}
+@InProceedings{10.1007/978-3-031-45857-6_15,
+author="Plutenko, Iaroslav
+and Papkov, Mikhail
+and Palo, Kaupo
+and Parts, Leopold
+and Fishman, Dmytro",
+editor="Koch, Lisa
+and Cardoso, M. Jorge
+and Ferrante, Enzo
+and Kamnitsas, Konstantinos
+and Islam, Mobarakol
+and Jiang, Meirui
+and Rieke, Nicola
+and Tsaftaris, Sotirios A.
+and Yang, Dong",
+title="Metadata Improves Segmentation Through Multitasking Elicitation",
+booktitle="Domain Adaptation and Representation Transfer",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="147--155",
+abstract="Metainformation is a common companion to biomedical images. However, this potentially powerful additional source of signal from image acquisition has had limited use in deep learning methods, for semantic segmentation in particular. Here, we incorporate metadata by employing a channel modulation mechanism in convolutional networks and study its effect on semantic segmentation tasks. We demonstrate that metadata as additional input to a convolutional network can improve segmentation results while being inexpensive in implementation as a nimble add-on to popular models. We hypothesize that this benefit of metadata can be attributed to facilitating multitask switching. This aspect of metadata-driven systems is explored and discussed in detail.",
+isbn="978-3-031-45857-6"
 }
 ```
