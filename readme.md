@@ -12,7 +12,7 @@ pip install -e .
 The last command is required for local dependencies to work across project folders and subfolders.
 
 ## Data
-The installation doesn't include data. Please download it separately from the [Retinal image database](https://blogs.kingston.ac.uk/retinal/chasedb1/) and unpack in the **data/CHASEDB1/** folder (or somewhere else, but the path should be specified in the configuration then).
+The installation doesn't include data. Please download it separately from the [Retinal image database](https://researchdata.kingston.ac.uk/96/) and unpack in the **data/CHASEDB1/** folder (or somewhere else, but the path should be specified in the configuration then).
 The data contains RGB 28 images of retina and two corresponding sets of binary masks with segmented vessels from two annotators. A few samples of this data are below:
 
 ![data01L](./images/data01L.png)
